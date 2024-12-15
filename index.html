@@ -5,136 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <div class="logo-container">
         <a href="index.html">
-            <img src="/images/logo.png" alt="Logo">
+            <img src="/images/logo.png" alt="Logo" class="logo">
         </a>
     </div>
     <title>TrackMate: Stay Connected, Stay Protected</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" /> <!-- Font Awesome for icons -->
-    <style>
-        /* Main styling */
-        body, html {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            font-family: Arial, sans-serif;
-            overflow: hidden;
-        }
-        .logo-container {
-            position: fixed; /* Keeps the logo in the top-left corner on scroll */
-            top: 0;
-            left: 0;
-            padding: 10px; /* Adds some spacing around the logo */
-            background-color: white; /* Optional: Adds a background to make it stand out */
-        }
-
-        .logo-container img {
-            max-width: 100px; /* Adjust the logo size */
-            height: auto; /* Maintain aspect ratio */
-        }
-
-        /* Map container */
-        #map {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-
-        /* TrackMate title styling */
-        .content {
-            position: absolute;
-            top: 15%;
-            width: 100%;
-            text-align: center;
-            color: #004d40;
-        }
-
-        .title {
-            font-size: 3em;
-            font-weight: bold;
-            background: linear-gradient(90deg, #00796b, #004d40);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), 0 0 25px rgba(0, 121, 107, 0.5); /* Multiple shadows for depth */
-            animation: fadeInBounce 4s forwards; /* Animation effect */
-        }
-
-        /* Title fade-out and bounce-in effect */
-        @keyframes fadeInBounce {
-            0% { opacity: 0; transform: translateY(-30px); }
-            60% { opacity: 1; transform: translateY(10px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Options section with fade-in */
-        .options-section {
-            display: none;
-            animation: fadeIn 2s forwards;
-            color: #00695c;
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        /* Fade-in animation for options */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        /* Feature box container */
-        .features {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        /* Feature box styling */
-        .feature-box {
-            background: linear-gradient(135deg, #00796b, #004d40); /* Gradient background */
-            color: #ffffff;
-            padding: 20px;
-            width: 250px;
-            height: 200px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            text-align: center;
-        }
-
-        .feature-box:hover {
-            transform: scale(1.05) rotate(2deg); /* Subtle rotation and scale effect */
-            box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.7);
-        }
-
-        /* Feature title styling */
-        .feature-title {
-            font-size: 1.3em;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        /* Feature content styling */
-        .feature-content {
-            font-size: 0.9em;
-            line-height: 1.4;
-        }
-
-        /* Icon styling */
-        .feature-icon {
-            font-size: 2em; /* Size for icons */
-            margin-bottom: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="/css/index.css">
+    
 </head>
 <body>
 
@@ -203,7 +81,7 @@
             document.getElementById('titleSection').style.display = 'none'; // Hide title
             const optionsSection = document.getElementById('optionsSection');
             optionsSection.style.display = 'block'; // Show options
-        }, 2000); // Timing after title fades out (4 seconds)
+        }, 3000); // Timing after title fades out (3 seconds)
 
         // Show login dialog
         function showLoginDialog() {

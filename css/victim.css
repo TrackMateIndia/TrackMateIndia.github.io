@@ -1,0 +1,54 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    text-align: center;    
+    background-color:whitesmoke;
+}
+
+.logo-container {
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 10%; /* Ensure container width */
+    aspect-ratio: 1 / 1; /* Make the container a perfect square */
+    border-radius: 50%; /* Make the container circular */
+    overflow: hidden; /* Ensure content doesn't overflow */
+    display: flex; /* Center the image inside */
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    max-width: 100%; /* Make the image fill the container */
+    height: 100%; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image scales proportionally */
+    border-radius: 50%; /* Ensures the image takes a circular shape */
+}
+
+
+a{
+    text-decoration: none; 
+    color: inherit;
+}
+
+/* Map container */
+#map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+h1{
+    display: block;
+}
+
+.location-button{
+    display: block center;
+}
