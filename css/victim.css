@@ -23,7 +23,7 @@ body, html {
 }
 
 .logo {
-    max-width: 100%; /* Make the image fill the container */
+    max-width: 320px; /* Make the image fill the container */
     height: 100%; /* Maintain aspect ratio */
     object-fit: cover; /* Ensure the image scales proportionally */
     border-radius: 50%; /* Ensures the image takes a circular shape */
